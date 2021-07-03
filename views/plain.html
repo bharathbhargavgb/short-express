@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>URL shortener</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Very fast URL shortener">
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 id="top-heading" style="text-align: center">Very <em>fast</em> URL shortener</h1>
+
+      <div class="url-form">
+        <form id="url-shortener-form">
+          <input type="url" class="url-input" id="url-input" placeholder="Enter URL" autocomplete="off" autofocus required />
+          <div class="customize-id">
+            <label class="custom-label" id="custom-label">
+              <input type="checkbox" class="custom-db" id="custom-cb">
+              <span>Customize short URL?</span></label>
+            </label>
+          </div>
+          <div class="custom-URL" id="custom-URL" >
+            <label class="base-url" id="base-url">https://base.url/</label>
+            <input type="text" class="custom-id" id="custom-id" autocomplete="off" />
+          </div>
+          <input type="submit" class="submit-btn" id="submit-btn" value="Shorten" />
+        </form>
+      </div>
+      <div>
+        <div class="loader" visible="false">Loading...</div>
+        <div id="output">
+          <div id="output-success">
+            <div><text id="shortID"></text></div>
+            <input type="submit" class="copy-btn" id="copy-btn" value="copy" />
+          </div>
+          <div id="output-error">
+            <span id="error-msg"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="shortener.js"></script>
+  </body>
+</html>
+
